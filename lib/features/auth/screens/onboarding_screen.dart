@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:anime_lab/routes/route_path_name.dart';
 
 class OnboardingScreen extends StatelessWidget {
   const OnboardingScreen({super.key});
@@ -21,7 +23,7 @@ class OnboardingScreen extends StatelessWidget {
 
           Expanded(
             child: Padding(
-              padding: const EdgeInsets.all(32.0),
+              padding: const EdgeInsets.symmetric(vertical: 32, horizontal: 16),
               child: Column(
                 children: [
                   const Text(
@@ -63,7 +65,7 @@ class OnboardingScreen extends StatelessWidget {
                     width: double.infinity,
                     height: 50,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () => context.go(RoutePathName.login),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.grey[200],
                         elevation: 0,
