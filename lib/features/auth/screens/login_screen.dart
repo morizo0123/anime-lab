@@ -218,7 +218,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
         const SizedBox(height: 4),
         TextField(
           controller: _emailController,
-          // keyboardType: TextInputType.emailAddress,
+          keyboardType: TextInputType.emailAddress,
           decoration: InputDecoration(
             hintText: 'example@email.com',
             hintStyle: TextStyle(color: Colors.grey[400]),
@@ -367,7 +367,7 @@ class _LoginScreenState extends ConsumerState<LoginScreen> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             TextButton(
-              onPressed: () {},
+              onPressed: () => context.go(RoutePathName.signup),
               child: const Text(
                 '新規登録はこちら',
                 style: TextStyle(

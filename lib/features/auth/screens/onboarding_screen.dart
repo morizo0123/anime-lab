@@ -42,7 +42,7 @@ class OnboardingScreen extends StatelessWidget {
                     width: double.infinity,
                     height: 50,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () => context.go(RoutePathName.signup),
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.purple[300],
                         elevation: 0,
